@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!--using-font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!--using-poppins-font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <!--using-lightbox-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Agileseen -Home</title>
+</head>
+<body>
+             <!-- Start Navbar -->
+            <section id="navbar">
+                    <nav>
+                       <div  class="logo">
+                         <a href="index.html"><img src="images/logo.png" width="50%"></a>
+                       </div>
+                       <input type="checkbox" id="click">
+                       <label for="click" class="menu-btn">
+                       <i class="fas fa-bars"></i>
+                       </label>
+                       <ul>
+                          <li><a class="active" href="index.html">HOME</a></li>
+                          <li><a href="about.html">ABOUT</a></li>
+                          <li><a href="services.html">SERVICES</a></li>
+                          <li><a href="project.html">PROJECT</a></li>
+                          <li><a href="contact.html">CONTACT</a></li>
+                       </ul>
+                    </nav>                
+            </section>
+
+             <!--End Navbar  -->
+
+
+
+
+
+              <!--===Project-Section======================================================-->
+  <section id="project">
+    <!--heading--------------->
+    <div class="project-heading">
+      <span>Let's See My Work</span>
+      <h3>MY PROJECTS</h3>
+    </div>
+    <!--filter--------->
+    <ul class="portfolio-filter">
+      <li class="list portfolio-filter-active" data-filter="all">All</li>
+      <li class="list" data-filter="app">Application</li>
+      <li class="list" data-filter="appdesign">App Design</li>
+      <li class="list" data-filter="web">Website Designs</li>
+      <li class="list" data-filter="ai">AI</li>
+  </ul>
+  <!--container--------->
+  <div class="portfolio-container">
+    <!--1------------>
+    <a href="images/b-1.jpg" class="portfolio-box app" data-lightbox="work">
+      <img alt="" src="images/b-1.jpg">
+    </a>
+    <!--2------------>
+    <a href="images/b-2.jpg" class="portfolio-box app" data-lightbox="work">
+      <img alt="" src="images/b-2.jpg">
+    </a>
+    <!--3------------>
+    <a href="images/b-3.jpg" class="portfolio-box appdesign" data-lightbox="work">
+      <img alt="" src="images/b-3.jpg">
+    </a>
+    <!--4------------>
+    <a href="images/b-4.jpg" class="portfolio-box web" data-lightbox="work">
+      <img alt="" src="images/b-4.jpg">
+    </a>
+    <!--5------------>
+    <a href="images/b-5.jpg" class="portfolio-box web" data-lightbox="work">
+      <img alt="" src="images/b-5.jpg">
+    </a>
+    <!--6------------>
+    <a href="images/b-6.jpg" class="portfolio-box ai" data-lightbox="work">
+      <img alt="" src="images/b-6.jpg">
+    </a>
+  </div>
+  </section>
+  <!--js---------------------------------->
+  <script>
+    /*blog-filter-menu----------------------------*/
+    $(document).on('click','.portfolio-filter li',function(){
+            $(this).addClass('portfolio-filter-active').siblings().removeClass('portfolio-filter-active')
+        });
+        
+     /*portfolio-filter---------------------------------*/
+     $(document).ready(function(){
+            $('.list').click(function(){
+                const value = $(this).attr('data-filter');
+                if(value == 'all'){
+                    $('.portfolio-box').show('1000');
+                }
+                else{
+                    $('.portfolio-box').not('.'+value).hide('1000');
+                    $('.portfolio-box').filter('.'+value).show('1000');
+                }
+            });
+        });
+  </script>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <!--footer=========================================-->
+    <footer>
+        <div class="footer-container">
+            
+            <!--footer-content----------------------------->
+            <div class="footer-content">
+                <!--box------------->
+                <div class="footer-box">
+                    <strong>explore</strong>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <!--box------------->
+                <div class="footer-box">
+                    <strong>Social</strong>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Dribble</a></li>
+                        <li><a href="#">Behance</a></li>
+                    </ul>
+                </div>
+                <!--box------------->
+                <div class="footer-box">
+                    <strong>Contact</strong>
+                    <ul>
+                        <li><a href="#">hi@GTN.io</a></li>
+                        <li><a href="#">+123456789</a></li>
+                    </ul>
+                </div>
+                <!--box------------->
+                <div class="footer-box">
+                    <strong>GTN.io</strong>
+                    <ul>
+                        <li>manteuffelstr.60b</li>
+                        <li>l0qqq berlin</li>
+                        <li>germany</li>
+                    </ul>
+                </div>
+            </div>
+            <!--footer-bottom------------->
+            <div class="footer-bottom">
+                <!--links----->
+                <div class="footer-bottom-link">
+                    <a href="#">privacy</a>
+                    <a href="#">site info</a>
+                    <a href="#">terms</a>
+                    
+                </div>
+                <!--copyright-->
+                <div class="copyright">
+                    <span>Copyright by <a href="#Home">Agileseen</a></span>
+                    <span>&#169; 2022 </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
